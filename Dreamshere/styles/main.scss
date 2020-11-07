@@ -1,0 +1,604 @@
+@import 'base/base';
+@import 'base/fonts';
+@import 'base/mixin';
+@import 'base/variables';
+
+// General Styles start
+
+.container{
+    width: 940px;
+    margin: 0 auto;
+}
+
+body{
+    font-family: 'Montserrat';
+}
+
+// General Styles end
+
+// Text Styles start
+
+h1{ 
+    font-style: normal;
+    font-weight: bold;
+    font-size: 52px;
+    line-height: 63px;
+    color: $fc-white;
+    text-align: center;
+    text-transform: uppercase;
+}
+
+h2{
+    font-style: normal;
+    font-weight: bold;
+    font-size: 26px;
+    line-height: 32px;
+    color: $fc-dark;
+    text-align: center;
+    margin-top: 95px;
+    margin-bottom: 35px;
+}
+
+h3{
+    font-style: normal;
+    font-weight: bold;
+    font-size: 24px;
+    line-height: 26px;
+    color: $fc-white;
+}
+
+p{
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: 300;
+    font-size: 14px;
+    line-height: 14px;
+    color: $fc-p;
+}
+
+a{
+    text-decoration: none;
+}
+
+// Text Styles end
+
+// Header Styles start
+
+.header{
+    position: relative;
+    width: 100%;
+    margin: 0 auto;
+}
+
+.header_wrapper{
+    margin: 0 auto;
+    width: 100%;
+    padding-top: 40px;
+    @include flexBox(space-between, baseline);
+    position: absolute;
+}
+
+.logo{
+    a{
+        font-style: normal;
+        font-weight: bold;
+        font-size: 20px;
+        line-height: 24px;
+        color: $fc-white;
+        text-transform: uppercase;
+    }
+}
+
+.log_sign{
+    margin-right: 40px;
+    @include flexBox(space-between, baseline);
+    a{
+        font-style: normal;
+        font-weight: normal;
+        font-size: 14px;
+        line-height: 17px;
+        color: $fc-white;
+        margin-left: 20px;
+        transition-property: color;
+        transition-duration: .3s;
+    }
+    .sign_up_btn{
+        display: block;
+        width: 90px;
+        height: 36px;
+        border: 2px solid $fc-white;
+        line-height: 32px;
+        text-align: center;
+        border-radius: 40px;
+        transition-property: background-color, border-color;
+        transition-duration: .3s;
+        &:hover{
+            background-color: $main_color;
+            border-color: $main_color;
+        }
+    }
+}
+
+.log_in a{
+    position: relative;
+    padding-bottom: 3px;
+}
+
+.log_in a{
+    &::after{
+        content: '';
+        display: block;
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        width: 0%;
+        height: 2px;
+        background-color: #fff;
+        transition: .3s all;
+        opacity: .9;
+    }
+    &:hover::after{
+        width: 100%;
+    }
+}
+
+
+// Header Styles end
+// Preview Styles start
+
+.preview{
+    width: 100%;
+    // height: 90vh;
+    padding-top: 223px;
+    @include backImg(url(../images/preview_img.jpg))
+}
+
+.preview_wrapper{
+    margin: 0 auto;
+    text-align: center;
+    width: 470px;
+    @include flexBox(flex-start, center, column)
+}
+
+.preview_title{  
+    margin: 0 auto;
+    margin-bottom: 28px;
+}
+
+.preview_sub_title{
+    font-size: 24px;
+    line-height: 24px;
+    margin-bottom: 33px;
+}
+
+.preview_btn{
+    width: 225px;
+    height: 40px;
+    display: block;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 14px;
+    line-height: 40px;
+    color: $fc-white;
+    text-align: center;
+    background:$main_color;
+    border-radius: 40px;
+    transition: .3s all;
+    margin-bottom: 225px;
+    &:hover{
+        background-color: #fff;
+        color:$main_color;
+    }
+}
+
+
+
+// Preview Styles end
+
+// Works Style start
+
+.works_cards{
+    @include flexBox(space-between);
+}
+
+.works_card{
+    width: 300px;
+    height: 400px;
+    padding: 20px 25px;
+    border-radius: 4px;
+    transition: .2s opacity;
+    @include backImg(url(../images/step-2-img.jpg));
+    @include flexBox(flex-end, flex-start, column);
+    .step{
+        width: 70px;
+        height: 20px; 
+        background: $main_color;
+        border-radius: 40px;  
+        font-style: normal;
+        font-weight: normal;
+        font-size: 10px;
+        line-height: 20px;
+        letter-spacing: 2px;
+        text-align: center;
+        text-transform: uppercase;
+        margin-bottom: 20px;
+    }
+    h3{
+        margin-bottom: 25px;
+    }
+    &:hover{
+        opacity: .9;
+    }
+}
+
+.works_card:first-child{
+    @include backImg(url(../images/step-1-img.jpg));
+}
+
+.works_card:last-child{
+    @include backImg(url(../images/step-3-img.jpg));
+}
+
+// Works Style end
+
+// Partner Style start
+
+.partner_cards{
+    @include flexBox(space-between);
+}
+
+.partner_card{
+    width: 220px;
+    @include flexBox(flex-start, center, column);
+    .partner_name{
+        margin: 17px 0px 20px;
+        font-style: normal;
+        font-weight: bold;
+        font-size: 14px;
+        line-height: 17px;
+    }
+    .partner_desc{
+        color: #666666;
+        text-align: center;
+    }
+}
+
+.partner_btn{
+    display: block;
+    width: 180px;
+    height: 40px;
+    margin: 35px auto 0px;
+    border: 2px solid $main_color;
+    border-radius: 40px;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 14px;
+    line-height: 36px;
+    color:$main_color;
+    text-align: center;
+    transition: .3s all;
+    &:hover{
+        background-color: $main_color;
+        color: $fc-white;
+    }
+}
+
+// Partner Style end
+
+// Holiday Styles start
+
+.holiday_ideas{
+    @include flexBox(space-between)
+}
+
+
+
+.holiday_idea_block{
+    width: 300px;
+    height: 310px;
+    margin-bottom: 20px;
+    border-radius: 4px;
+    text-align: center;
+    overflow: hidden;
+    position: relative;
+    &:hover{
+        img{
+            transform: scale(1.06);
+            opacity: 0.9;
+        }
+    }
+    img{
+        width: 100%;
+        transition: .5s transform, opacity ;
+    }
+    h3{
+        width: 100%;
+        height: 30px;
+        font-size: 22px;
+        line-height: 27px;
+        position: absolute;
+        z-index: 2;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        margin: auto;
+    }
+}
+.long{
+    width: 620px;
+}
+
+// Holiday Styles end
+
+// Activity Styles start
+
+.activity_sub_title{
+    font-size: 18px;
+    line-height: 14px;
+    color: #666666;
+    text-align: center;
+    margin-bottom: 25px;
+}
+
+.avtibity_form{
+    width: 481px;
+    margin: 0 auto 100px;
+    @include flexBox(space-between)
+}
+
+input[type = text]{
+    width: 300px;
+    height: 40px;
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 300;
+    font-size: 14px;
+    line-height: 16px;
+    color: #999999;
+    border: 1px solid #D4D4D4;
+    border-radius: 3px;
+    padding-left: 15px;
+}
+
+input[type = button]{
+    width: 172px;
+    height: 40px;
+    background:$main_color;
+    border-radius: 40px;
+    border: none;
+    font-family: Montserrat;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 14px;
+    line-height: 17px;
+    color: $fc-white;
+    transition: .3s all;
+    &:hover{
+        background: hsla(359, 100%, 65%, 0.8); 
+    }
+}
+
+::-webkit-input-placeholder {color:#999999; font-family: Roboto; font-size: 14px; line-height: 16px; font-weight: 300;} 
+::-moz-placeholder          {color:#999999; font-family: Roboto; font-size: 14px; line-height: 16px; font-weight: 300;}
+:-moz-placeholder           {color:#999999; font-family: Roboto; font-size: 14px; line-height: 16px; font-weight: 300;}
+:-ms-input-placeholder      {color:#999999; font-family: Roboto; font-size: 14px; line-height: 16px; font-weight: 300;}
+
+// Activity Styles end
+
+// Footer Styles start
+
+.footer{
+    width: 100%;
+    border-top: 2px solid $main_color;
+    padding: 38px 0px 36px; 
+}
+
+.footer_wrapper{
+    @include flexBox(space-between);
+}
+
+.footer_left{
+    width: 544px;
+    @include flexBox(space-between);
+}
+
+.footer_logo{
+    font-style: normal;
+    font-weight: normal;
+    font-size: 16px;
+    line-height: 20px;
+    color: $main_color;
+    text-transform: uppercase;
+}
+
+.company{
+    a{
+        color: #999999;
+        font-family: Roboto;
+        font-style: normal;
+        font-weight: 300;
+        font-size: 14px;
+        line-height: 26px;
+        position: relative;
+        padding-bottom: 1px;
+        &::after{
+            content: '';
+            display: block;
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 0%;
+            height: 1px;
+            background-color: #999;
+            transition: .3s all;
+        }
+        &:hover::after{
+            width: 100%;
+        }
+    }
+}
+
+.company_span, .partners_span{
+    display: block;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 14px;
+    line-height: 17px;
+    color: $fc-dark;
+    margin-bottom: 11px;
+}
+
+.designed_by{
+    @include flexBox(flex-start, flex-end, column);
+    span{
+        font-family: Montserrat;
+        font-style: normal;
+        font-weight: bold;
+        font-size: 10px;
+        line-height: 12px;
+        color: #CCCCCC;;
+        margin-bottom: 7px;
+    }
+}
+
+// Footer Styles end
+
+// Media Styles start
+
+@media screen and (max-width: 985px) and (min-width: 780px){
+    .container{
+        width: 748px;
+    }
+    .works_card{
+        width: 236px;
+    }
+    .partner{
+        margin: 0 auto;
+        width: 492px;
+    }
+    .holiday_idea_block{
+        width: 236px;
+        img{
+            margin-left: -30px;
+            width: 300px;
+            height: 310px;
+        }
+    }
+    .long{
+        img{
+            margin-left: -50px;
+            width: 620px;
+        }
+        width: 492px;
+    }
+    h2{
+        font-size: 22px;
+        line-height: 27px;
+    }
+    .partner_card{
+        margin-bottom: 36px;
+    }
+}
+
+@media screen and (max-width: 780px){
+    .container{
+        width: 98%;
+    }
+    .header_wrapper{       
+        @include flexBox(space-between, center, column-reverse);
+    }
+    .logo{
+        padding-top: 97px;
+    }
+    .works_card{
+        width: 100%;
+        height: 80vw;
+        margin-bottom: 10px;
+    }
+    .partner{
+        margin: 0 auto;
+        // width: 300px;
+    }
+    .partner_card{
+        margin-bottom: 16px;
+        width: 100%;
+    }
+    .holiday_idea_block{
+        width: 100%;
+        height: 50vw;
+        img{
+            margin-top: -100px;
+            // width: 100%;
+            // height: 100%;
+        }
+    }
+    .long{
+        img{
+            margin-top: 0px;
+        }
+    }
+    h1{
+        font-size: 30px;
+        line-height: 37px;
+    }
+    .preview_sub_title{
+        font-size: 18px;
+        line-height: 24px;
+    }
+    .preview_btn{
+        width: 270px;
+        margin-bottom: 153px;
+    }
+    .preview_wrapper{
+        width: 280px;
+    }
+    h2{
+        margin: 36px 0px 14px;
+        font-size: 22px;
+        line-height: 27px;
+    }
+    .partner_btn{
+        width: 270px;
+    }
+    .avtibity_form{
+        width: 100%;
+        @include flexBox(flex-start, center, column);
+        margin-bottom: 20px;
+    }
+    input[type=button]{
+        margin-top: 10px;
+        width: 270px;
+    }
+    input[type=text]{
+        width: 270px;
+    }
+    .footer_left{
+        margin: 0 auto;
+        @include flexBox(flex-start, center, column);
+    }
+    .company{
+        margin-top: 13px;
+        width: 100%;
+        text-align: center;
+    }
+    .footer_right{
+        margin: 0 auto;
+        .designed_by{
+            @include flexBox(flex-start, center, column);
+        }
+    }
+    nav ul{
+        width: 100%;
+        @include flexBox(center);
+        li{
+            margin: 5px;
+        }
+    }
+    .footer{
+        padding: 20px 0px 20px;
+    }
+}
+
+
+// Media Styles end
