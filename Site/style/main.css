@@ -1,0 +1,678 @@
+@import url(./reset.css);
+@import url(./fonts.css);
+
+/* General Styles */
+
+.uppercase{
+    text-transform: uppercase;
+}
+
+h2{
+    font-family: 'Bahij Sultannahia';
+    font-size: 29px;
+    line-height: 32px;
+}
+
+p{
+    font-family: 'ChornicaPro Regular';
+    font-size: 18px;
+    font-weight: 700;
+    color: #B1B1B1;
+    line-height: 28px;
+}
+
+body{
+    background-color: #FEFEFE;
+}
+.active{
+    color: #2785F7;
+}
+
+.container{
+    width: 1440px;
+    margin: 0 auto;
+}
+
+/* General Styles */
+
+/*  Header */
+
+
+
+/*  Header */
+
+/* Content */
+
+.content{
+    width: 1404px;
+    margin: 0 auto;
+    min-height: 500px;
+    background: #EAEBED;
+    border-radius: 30px;
+    margin-bottom: 100px;
+}
+
+.content_main{
+    padding: 80px 0px 58px;
+}
+
+.content_inner{
+    height: 615px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0px 23px;
+}
+
+/*  Menu */
+
+.button_menu{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+.button_menu a{
+    display: block;
+    width: 40px;
+    height: 40px;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.button_menu_ico_f{
+    background-image: url(../img/folder.png);
+}
+.button_menu:hover .button_menu_ico_f{
+    background-image: url(../img/folder_white.png);
+}
+.active_f{
+    background-image: url(../img/folder_white.png);
+}
+
+.button_menu_ico_a{
+    background-image: url(../img/monitor.png);
+}
+.button_menu:hover .button_menu_ico_a{
+    background-image: url(../img/monitor-w.png);
+}
+.active_a{
+    background-image: url(../img/monitor-w.png);
+}
+
+.button_menu_ico_g{
+    background-image: url(../img/users-alt.svg);
+}
+.button_menu:hover .button_menu_ico_g{
+    background-image: url(../img/users-w.png);
+}
+
+.button_menu_ico_c{
+    background-image: url(../img/cloud-share.svg);
+}
+.button_menu:hover .button_menu_ico_c{
+    background-image: url(../img/cloud-share-w.png);
+}
+
+.button_menu_ico_s{
+    background-image: url(../img/cog.svg);
+}
+.button_menu:hover .button_menu_ico_s{
+    background-image: url(../img/cog-w.png);
+}
+
+
+
+.nav{
+    margin: 0 auto;
+    width: 470px;
+    height: 130px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+a{
+    font-family: 'Bahij Sultannahia';
+    font-size: 29px;
+    line-height: 32px;
+    transition-property: color;
+    transition-duration: 0.5s;
+    text-decoration: none;
+    color: #131313;
+}
+
+a:hover{
+    color: #4A8EE5;
+}
+
+.menu{
+    padding: 30px 0;
+    border-radius: 30px;
+    background-color: #FEFEFE;
+    width: 105px;
+    height: 420px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.button_menu{
+    border-radius: 15px;
+    width: 67px;
+    height: 62px;
+    transition-property: background-color;
+    position: relative;
+    text-align: center;
+    font-family: 'Bahij Sultannahia';
+    color: #fff;
+    line-height: 62px;
+    font-size: 30px;
+}
+
+/* .button_menu::before{
+    background-image: url(../img/folder.png);
+    width: 67px;
+    height: 62px;
+    position: absolute;
+    z-index: 1;
+} */
+
+.active_btn{
+    background-color: #2785F7;
+}
+
+.button_menu::after{
+    content: 'Progect';
+    display: block;
+    width: 0px;
+    height: 100%;
+    background-color: #2785F7;
+    border-radius: 0px 15px 15px 0px;
+    position: absolute;
+    top: 0;
+    left: 82%;
+    transition-property: width;
+    overflow: hidden;
+}
+
+.button_menu:hover::after{
+    width: 130px;
+    transition: 0.7s;
+}
+
+.button_menu:hover{
+    background-color: #2785F7;
+}
+
+
+.button_menu img{
+    width: 67px;
+    padding: 14px;
+}
+
+.folder::after{
+    content: 'Progect';
+}
+
+.account::after{
+    content: 'Account';
+}
+
+.groups::after{
+    content: 'Groups';
+}
+
+.cloud::after{
+    content: 'Cloud';
+}
+
+.setting::after{
+    content: 'Setting';
+}
+
+/*  Menu */
+
+/*  About */
+
+.about_top{
+    width: 1213px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.about_top_block{
+    width: 592px;
+    padding: 32px 0px 32px 42px;
+    border-radius: 30px;
+    background-color: #FEFEFE;
+}
+
+.left_block_img img{
+    width: 120px;
+    height: 138px;
+}
+
+.about_bottom_left_block{
+    margin: 34px 0px 22px;
+    background-color: #FEFEFE;
+    width: 732px;
+    height: 194px;
+    padding: 34px 100px 34px 42px;
+    border-radius: 30px;
+}
+
+.team_block{
+    display: flex;
+}
+
+.left_block_text{
+    margin-left: 49px;
+}
+
+.about_bottom_right img{
+    width: 120px;
+    height: 112px;
+}
+
+.about_bottom{
+    display: flex;
+    justify-content: space-between;
+}
+
+.about_bottom_right{
+    width: 447px;
+    padding: 34px 39px 38px 42px;
+    /* height: 410px; */
+    border-radius: 30px;
+    background-color: #fefefe;
+    margin: 34px 0px 22px;
+}
+
+.about_bottom_right img{
+    margin-bottom: 24px;
+}
+
+/*  About */
+
+/* Content */
+
+/* Team */
+
+.content_team{
+    padding: 56px 34px 0px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.team_card{
+    margin-bottom: 50px;
+    padding-top: 51px;
+    background-color: #fefefe;
+    width: 300px;
+    border-radius: 30px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    transition-property: background-color, color, ;
+    transition-duration: 0.2s;
+    position: relative;
+}
+
+.team_card:hover::after{
+    content:'';
+    width: 82px;
+    height: 76px;
+    border-radius: 20px;
+    background-color: #fff;
+    top: -40px;
+    left: 80%;
+    display: block;
+    position: absolute;
+}
+
+.team_card:hover::before{
+    content: '';
+    width: 40px;
+    height: 40px;
+    top: -20px;
+    left: 262px;
+    z-index: 1;
+    background-image: url(../img/trash.png);
+    position: absolute;
+}
+
+.team_card:hover{
+    background-color: #2684F7;
+    color: #fff;
+}
+
+.card_img img{
+    border-radius: 50%;
+    width: 100px;
+}
+
+.card_name p{
+    font-weight: 500;
+}
+
+.card_name{
+    text-align: center;
+    margin: 11px 0px 28px;
+}
+
+.card_date p{
+    font-weight: 500;
+}
+
+.card_date{
+    margin-bottom: 49px;
+}
+
+/* Teame */
+
+/* Lessons */
+
+.cours_element{
+    width: 120px;
+    display: flex;
+    justify-content: center;
+}
+
+.content_lessons{
+    padding: 138px 86px;
+}
+
+.lessons_header{
+    width: 1194px;
+    padding: 0px 50px 0px 50px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 41px;
+}
+
+.lessons_header h2{
+    text-align: center;
+    width: 120px;
+}
+
+.t_a_c{
+    text-align: center;
+    width: 120px;
+}
+
+.cours_button{
+    width: 34px;
+    height: 35px;
+    border: 1px solid rgb(155, 155, 155);
+    border-radius: 10px;
+    position: relative;
+}
+
+.cours_button::after{
+    content: '';
+    display: block;
+    width: 24px;
+    height: 24px;
+    top: 4px;
+    left: 4px;
+    background-image: url(../img/download.png);
+    position: absolute;
+}
+
+
+
+.cours_button:hover{
+    background-color: #2684F7;
+    border-color: #2684F7;
+}
+
+.cours{ 
+    border-radius: 21px;
+    width: 1194px;
+    margin: 16px auto;
+    padding: 18px 50px 12px 50px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.cours:hover{
+    background-color: #fefefe;
+}
+
+.transition_bc{
+    transition-property: background-color;
+    transition-duration: 0.3s;
+}
+
+.custom_checkbox{
+    display: none;
+}
+
+.fake{
+    cursor: pointer;
+    display: block;
+    width: 30px;
+    height: 30px;
+    border: 1px solid #adb5bd;
+    border-radius: 11px;
+    background-color: #fff;
+    position: relative;
+}
+
+.fake::before{
+    content: '';
+    display: block;
+    position: absolute;
+    height: 20px;
+    width: 20px;
+    background-color:#0b76ef;
+    border-radius: 11px;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    opacity: 0;
+    transition: .2s;
+}
+
+.custom-checkbox:checked + .fake::before {
+    opacity: 1;
+}
+
+
+.checkbox-login01 {
+    display: none;
+}
+.style-login01 {
+    cursor: pointer;
+    display: block;
+    width: 30px;
+    height: 30px;
+    border: 1px solid #adb5bd;
+    border-radius: 11px;
+    background-color: #fff;
+    position: relative;
+}
+
+.style-login01::before {
+    content: '';
+    display: block;
+    position: absolute;
+    height: 30px;
+    width: 30px;
+    background-color:#0b76ef;
+    border-radius: 11px;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    opacity: 0;
+    transition: .2s;
+    background-image: url(../img/tick.png);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: 80%;
+}
+.checkbox-login01:checked + .style-login01::before {
+  opacity: 1;
+}
+
+/* Lessons */
+
+/* Account */
+
+.account_content{
+    display: flex;
+    justify-content: space-between;
+}
+
+.account_content_left{
+    width: 615px;
+    min-height: 300px;
+}
+
+.account_content_right{
+    width: 588px;
+    min-height: 300px;
+    background-color: #fefefe;
+    margin-bottom: 20px;
+    border-radius: 30px;
+    padding: 42px;
+}
+
+.account_email{
+    display: flex;
+    padding: 42px;
+    background: #FEFEFE;
+    border-radius: 30px;
+    margin: 0px 17px 20px 0px;
+}
+
+.account_email_img, .account_password_img, .account_company_img{
+    border-radius: 50%;
+    width: 65px;
+    height: 65px;
+    text-align: center;
+    color: #fff;
+    background: #F24F5E;
+    margin-right: 42px;
+}
+
+.account_password{
+    margin-right: 20px;
+    padding: 42px;
+    background: #FEFEFE;
+    border-radius: 30px;
+    margin-bottom: 20px;
+}
+
+.account_password_top{
+    display: flex;
+}
+
+.account_password_img img{
+    padding-top: 12px;
+}
+.account_password_img{
+    background: #2785F7;
+}
+
+.account_company_img img{
+    padding-top: 12px;
+}
+.account_company_img{
+    background: #2785F7;
+}
+
+.account_email_img h2{
+    line-height: 65px;
+    font-size: 45px;
+}
+
+.account_email_data h2, .account_password_data h2, .account_company_top h2{
+    font-size: 42px;
+    padding-bottom: 6px;
+}
+
+.account_company_top{
+    display: flex;
+}
+
+/* Form */
+
+form p{
+    color: #000;
+    margin: 16px 0px 22px;
+}
+
+input[type=password]{
+    width: 100%;
+    height: 63px;
+    outline: none;
+    background: #FEFEFE;
+    border: 2px solid #C0C0C0;
+    box-sizing: border-box;
+    border-radius: 21px;
+    padding-left: 14px;
+    font-family: 'ChornicaPro Regular';
+    font-weight: 600; 
+}
+
+input[type=text]{
+    width: 100%;
+    height: 63px;
+    outline: none;
+    background: #FEFEFE;
+    border: 2px solid #C0C0C0;
+    box-sizing: border-box;
+    border-radius: 21px;
+    padding-left: 14px;
+    font-family: 'ChornicaPro Regular';
+    font-weight: 600;   
+}
+textarea{
+    padding-top: 16px;
+    width: 100%;
+    height: 100px;
+    outline: none;
+    background: #FEFEFE;
+    border: 2px solid #C0C0C0;
+    box-sizing: border-box;
+    border-radius: 21px;
+    padding-left: 14px;
+    font-family: 'ChornicaPro Regular';
+    font-weight: 600; 
+    resize: none;  
+}
+
+input:focus, textarea:focus{
+    border-color: #2785F7;
+}
+
+.form_bottom{
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.form_bottom input{
+    width: 237px;
+}
+
+/* Placeholder */
+
+::-webkit-input-placeholder { color: #B1B1B1; font-family: 'ChornicaPro Regular'; font-weight: 600;}
+::-moz-placeholder { color: #B1B1B1; font-family: 'ChornicaPro Regular'; font-weight: 600;}
+:-ms-input-placeholder { color: #B1B1B1; font-family: 'ChornicaPro Regular'; font-weight: 600;}
+:-moz-placeholder { color: #B1B1B1; font-family: 'ChornicaPro Regular'; font-weight: 600;}
+
+/* Placeholder */
+
+/* Form */
+
+
+/* Account */
